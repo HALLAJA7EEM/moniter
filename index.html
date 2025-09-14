@@ -1,439 +1,245 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Breached | discord.gg/j7e</title>
+    <title>HACKED BY SAHM</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Share Tech Mono', monospace;
         }
         
         body {
-            background-color: #0a0a0a;
-            color: #00ff00;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: #000;
+            color: #0F0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
             padding: 20px;
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
         
         body::before {
             content: "";
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 0, 0.05),
+                rgba(0, 255, 0, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
             z-index: -1;
         }
         
         .container {
-            width: 100%;
-            max-width: 900px;
-            border: 1px solid #00ff00;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            max-width: 800px;
+            margin: 50px auto;
+            border: 1px solid #0F0;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
             position: relative;
-            overflow: hidden;
-        }
-        
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(transparent 90%, rgba(0, 255, 0, 0.1) 100%);
-            animation: scan 5s linear infinite;
-            pointer-events: none;
-            z-index: 2;
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #00ff00;
-            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #0F0;
         }
         
-        .title {
-            font-size: 2.5rem;
-            color: #ff0000;
-            text-shadow: 0 0 10px #ff0000;
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
             margin-bottom: 10px;
-            letter-spacing: 2px;
+            text-shadow: 0 0 10px #0F0;
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
-        .subtitle {
-            font-size: 1.2rem;
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-        }
-        
-        .hack-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid #ff0000;
-            border-radius: 5px;
-            padding: 15px;
+        .credentials {
             margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hack-box::before {
-            content: ">";
-            position: absolute;
-            top: 15px;
-            left: 10px;
-            color: #00ff00;
-            animation: blink 1s infinite;
-        }
-        
-        .terminal-text {
-            color: #00ff00;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-left: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        
-        .terminal-text span {
-            display: block;
-            animation: type 0.1s linear forwards;
-            opacity: 0;
-        }
-        
-        .ip-info {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid #ff0000;
-            border-radius: 5px;
             padding: 15px;
-            margin: 20px 0;
-            color: #ff0000;
-            font-size: 0.9rem;
-            text-shadow: 0 0 5px #ff0000;
+            border: 1px dashed #0F0;
+            background-color: rgba(0, 20, 0, 0.3);
+            font-size: 1.2em;
         }
         
-        .discord-section {
-            text-align: center;
+        .message {
             margin: 30px 0;
             padding: 15px;
-            border: 1px solid #00ff00;
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.7);
+            border-left: 3px solid #0F0;
         }
         
-        .discord-link {
-            color: #ff0000;
-            text-decoration: none;
-            font-size: 1.5rem;
-            text-shadow: 0 0 5px #ff0000;
-            transition: all 0.3s ease;
+        .message p {
+            margin-bottom: 15px;
+            text-align: justify;
         }
         
-        .discord-link:hover {
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00;
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #0F0;
+            font-weight: bold;
+            font-size: 1.2em;
         }
         
         .footer {
             text-align: center;
-            margin-top: 30px;
-            color: #00ff00;
-            font-size: 0.9rem;
-            text-shadow: 0 0 5px #00ff00;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #0A0;
         }
         
-        @keyframes scan {
-            0% {
-                top: -100%;
-            }
-            100% {
-                top: 100%;
-            }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1em;
+            background-color: #0F0;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
         }
         
         @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
         
-        @keyframes type {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #0F0; }
+            to { text-shadow: 0 0 20px #0F0, 0 0 30px #0F0; }
         }
         
-        .glitch {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .glitch::before, .glitch::after {
-            content: attr(data-text);
-            position: absolute;
+        .scan-line {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 2px;
+            background: linear-gradient(to bottom, rgba(0, 255, 0, 0.5), transparent);
+            animation: scan 5s linear infinite;
+            z-index: 9999;
+            pointer-events: none;
         }
         
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 #ff0000;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
         }
         
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 #00ff00;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        .hacked-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 8em;
+            color: rgba(0, 255, 0, 0.1);
+            z-index: -1;
+            text-transform: uppercase;
+            white-space: nowrap;
+            user-select: none;
         }
         
-        @keyframes glitch-anim {
-            0% {
-                clip: rect(42px, 9999px, 44px, 0);
-            }
-            5% {
-                clip: rect(12px, 9999px, 59px, 0);
-            }
-            10% {
-                clip: rect(48px, 9999px, 29px, 0);
-            }
-            15% {
-                clip: rect(42px, 9999px, 73px, 0);
-            }
-            20% {
-                clip: rect(63px, 9999px, 27px, 0);
-            }
-            25% {
-                clip: rect(34px, 9999px, 55px, 0);
-            }
-            30% {
-                clip: rect(86px, 9999px, 73px, 0);
-            }
-            35% {
-                clip: rect(20px, 9999px, 20px, 0);
-            }
-            40% {
-                clip: rect(26px, 9999px, 60px, 0);
-            }
-            45% {
-                clip: rect(25px, 9999px, 66px, 0);
-            }
-            50% {
-                clip: rect(57px, 9999px, 98px, 0);
-            }
-            55% {
-                clip: rect(5px, 9999px, 46px, 0);
-            }
-            60% {
-                clip: rect(82px, 9999px, 31px, 0);
-            }
-            65% {
-                clip: rect(54px, 9999px, 27px, 0);
-            }
-            70% {
-                clip: rect(28px, 9999px, 99px, 0);
-            }
-            75% {
-                clip: rect(45px, 9999px, 69px, 0);
-            }
-            80% {
-                clip: rect(23px, 9999px, 85px, 0);
-            }
-            85% {
-                clip: rect(54px, 9999px, 84px, 0);
-            }
-            90% {
-                clip: rect(45px, 9999px, 47px, 0);
-            }
-            95% {
-                clip: rect(24px, 9999px, 23px, 0);
-            }
-            100% {
-                clip: rect(32px, 9999px, 92px, 0);
-            }
+        .error-flash {
+            animation: errorFlash 0.5s;
         }
         
-        @keyframes glitch-anim2 {
-            0% {
-                clip: rect(65px, 9999px, 100px, 0);
-            }
-            5% {
-                clip: rect(52px, 9999px, 74px, 0);
-            }
-            10% {
-                clip: rect(79px, 9999px, 85px, 0);
-            }
-            15% {
-                clip: rect(75px, 9999px, 5px, 0);
-            }
-            20% {
-                clip: rect(67px, 9999px, 61px, 0);
-            }
-            25% {
-                clip: rect(14px, 9999px, 79px, 0);
-            }
-            30% {
-                clip: rect(1px, 9999px, 66px, 0);
-            }
-            35% {
-                clip: rect(86px, 9999px, 30px, 0);
-            }
-            40% {
-                clip: rect(23px, 9999px, 98px, 0);
-            }
-            45% {
-                clip: rect(85px, 9999px, 72px, 0);
-            }
-            50% {
-                clip: rect(71px, 9999px, 75px, 0);
-            }
-            55% {
-                clip: rect(2px, 9999px, 48px, 0);
-            }
-            60% {
-                clip: rect(30px, 9999px, 16px, 0);
-            }
-            65% {
-                clip: rect(59px, 9999px, 50px, 0);
-            }
-            70% {
-                clip: rect(41px, 9999px, 62px, 0);
-            }
-            75% {
-                clip: rect(2px, 9999px, 82px, 0);
-            }
-            80% {
-                clip: rect(47px, 9999px, 73px, 0);
-            }
-            85% {
-                clip: rect(3px, 9999px, 27px, 0);
-            }
-            90% {
-                clip: rect(26px, 9999px, 55px, 0);
-            }
-            95% {
-                clip: rect(42px, 9999px, 97px, 0);
-            }
-            100% {
-                clip: rect(38px, 9999px, 49px, 0);
-            }
+        @keyframes errorFlash {
+            0%, 100% { background-color: transparent; }
+            50% { background-color: rgba(255, 0, 0, 0.2); }
         }
         
         @media (max-width: 768px) {
-            .title {
-                font-size: 1.8rem;
+            h1 {
+                font-size: 2em;
             }
             
-            .terminal-text {
-                font-size: 0.9rem;
+            .container {
+                padding: 15px;
+                margin: 20px;
             }
             
-            .discord-link {
-                font-size: 1.2rem;
+            .hacked-text {
+                font-size: 4em;
             }
         }
     </style>
 </head>
 <body>
+    <div class="scan-line"></div>
+    <div class="hacked-text">Hacked</div>
+    
+    <!-- مشغل الصوت البسيط -->
+    <audio autoplay loop>
+        <source src="aa.mp3" type="audio/mpeg">
+        متصفحك لا يدعم عنصر الصوت.
+    </audio>
+    
     <div class="container">
         <div class="header">
-            <h1 class="title glitch" data-text="SYSTEM BREACHED">SYSTEM BREACHED</h1>
-            <p class="subtitle">تم اختراق النظام بنجاح</p>
+            <h1>HACKED BY SAHM</h1>
         </div>
         
-        <div class="hack-box">
-            <div class="terminal-text">
-                <span style="animation-delay: 0.5s">> جارٍ جمع المعلومات...</span>
-                <span style="animation-delay: 1.5s">> العثور على الثغرات...</span>
-                <span style="animation-delay: 2.5s">> استغلال الثغرات...</span>
-                <span style="animation-delay: 3.5s">> تخطى  الحماية...</span>
-                <span style="animation-delay: 4.5s">> الوصول إلى النظام الأساسي...</span>
-                <span style="animation-delay: 5.5s">> سحب الملفات...</span>
-                <span style="animation-delay: 6.5s">> الاختراق مكتمل بنجاح!</span>
-            </div>
+        <div class="credentials">
+            discondgv@es<br>
+            mystery@system-5 why?<span class="cursor"></span>
         </div>
         
-        <div class="ip-info">
-            <h3>معلومات النظام المخترق:</h3>
-            <pre id="ip-data">جارٍ جمع البيانات...</pre>
+        <div class="message">
+            <p>SAHM :</p>
+            <p>السلام عليكم ورصة في رسوماتك.</p>
+            <p>لا تحقق بنا نزد المادية مراجعة بالديه مطلب قيمته قبل أربع سنين ظلم وبهشات رائماً كنت اداري طموح سلكم وليهم ولم أعطى حق وقيمة التعبيري وحاولتا أمثلة لمن الساسي أكثر من مرد وتجريه أو زد استقطاعوا مراجعها بالسياس المعروضين فقط.</p>
+            <p>استخدامها ضخم التعبيري سلبان فقرات</p>
         </div>
         
-        <div class="discord-section">
-            <p>انضم إلى سيرفرنا على الديسكورد</p>
-            <a href="https://discord.gg/j7e" class="discord-link">discord.gg/j7e</a>
-            <p style="margin-top: 15px; color: #00ff00;">Ja7eem OP - لاتلعب ويه الجحيم ياحلو</p>
+        <div class="signature">
+            ---<br>
+            OPTICALY BLACKSHOWER - SANNUITISME
         </div>
         
         <div class="footer">
-            <p>System Hacked © By Ahmed</p>
+            System compromised. Access logged.
         </div>
     </div>
-    
+
     <script>
-        // محاكاة تأثير الكتابة في الطرفية
+        // تأثير كتابة النص
         document.addEventListener('DOMContentLoaded', function() {
-            const spans = document.querySelectorAll('.terminal-text span');
-            spans.forEach(span => {
-                span.style.animation = `type 0.1s linear ${span.style.animationDelay} forwards`;
-            });
+            const textElement = document.querySelector('.credentials');
+            const originalText = textElement.innerHTML;
+            textElement.innerHTML = '';
             
-            // محاكاة جلب معلومات IP (لأغراض العرض فقط)
-            setTimeout(() => {
-                const fakeData = {
-                    ip: "192.168.0.1",
-                    city: "الرياض",
-                    region: "الرياض",
-                    country: "SA",
-                    loc: "24.7136,46.6753",
-                    org: "AS Company Inc.",
-                    postal: "12345",
-                    timezone: "Asia/Riyadh",
-                    readme: "https://ipinfo.io/missingauth"
-                };
-                
-                delete fakeData.readme;
-                document.getElementById('ip-data').textContent = JSON.stringify(fakeData, null, 2);
-            }, 7000);
+            let i = 0;
+            const typeWriter = setInterval(function() {
+                if (i < originalText.length) {
+                    textElement.innerHTML += originalText.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typeWriter);
+                }
+            }, 50);
+            
+            // تأثير عشوائي لوميض الخطأ
+            setInterval(function() {
+                if (Math.random() > 0.8) {
+                    document.body.classList.add('error-flash');
+                    setTimeout(function() {
+                        document.body.classList.remove('error-flash');
+                    }, 500);
+                }
+            }, 3000);
         });
-        
-        // تأثير الخط المتقطع (glitch) للعنوان
-        setInterval(() => {
-            const glitch = document.querySelector('.glitch');
-            glitch.classList.remove('glitch');
-            setTimeout(() => {
-                glitch.classList.add('glitch');
-            }, 100);
-        }, 5000);
     </script>
 </body>
 </html>
