@@ -1,69 +1,264 @@
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>discord.gg/j7e</title>
+    <title>Ja7eem | discord.gg/j7e</title>
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        * {
             margin: 0;
             padding: 0;
-            background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Courier New', Courier, monospace;
-            color: #ff0000;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(120, 0, 0, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 75% 75%, rgba(80, 0, 0, 0.2) 0%, transparent 40%);
+            font-family: 'Cairo', sans-serif;
+            color: #fff;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
             text-align: center;
         }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #ff3333;
+            text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333;
+            margin-bottom: 30px;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
         .image-container img {
-            width: 750px; 
+            width: 100%;
+            max-width: 600px;
             height: auto;
-            border: 2px solid #ff0000; 
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 255, 0.7); 
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
         }
-        .info {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #ff0000; 
-            text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000; 
-            letter-spacing: 4.5px; 
-            white-space: pre-wrap;
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
         }
-        .text {
-            margin-top: 20px;
-            font-size: 3em; 
-            color: #ff1d1d; 
-            text-shadow: 0px 0px 8px #ff1212, 0px 0px 15px #fb1111, 0px 0px 25px #ff1111; 
-            letter-spacing: 4.5px; 
+        
+        .text-content {
+            margin: 30px 0;
+        }
+        
+        .text-line {
+            font-size: 1.8rem;
+            color: #ff1d1d;
+            text-shadow: 0 0 8px #ff1212, 0 0 15px #fb1111, 0 0 25px #ff1111;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        
+        .discord-info {
+            margin: 30px 0;
+            padding: 15px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        
+        .discord-link {
+            font-size: 2rem;
+            color: #ff0000;
+            text-decoration: none;
+            text-shadow: 0 0 8px #ff0000;
+            transition: all 0.3s ease;
+        }
+        
+        .discord-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ff0000;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #ff4444;
+            text-shadow: 0 0 5px #ff4444;
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #ff0000;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            }
+            to {
+                text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 45px #ff0000;
+            }
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle, .text-line {
+                font-size: 1.4rem;
+            }
+            
+            .discord-link {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="https://gifdb.com/images/high/puppet-with-fire-exdjlk4bbjsk381m.gif" alt="Discord Image">
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Ja7eem</h1>
+            <p class="subtitle">سيرفر الديسكورد العربي</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="https://gifdb.com/images/high/puppet-with-fire-exdjlk4bbjsk381m.gif" alt="نار وغضب">
+            <div class="image-overlay">🔥 القوة والغضب 🔥</div>
+        </div>
+        
+        <div class="text-content">
+            <p class="text-line">أما توردها مواريد الأبطال ولا أسترح وخل المراجل لأهلها</p>
+            <p class="text-line">حياك دسكوردنا + سيرفركم كله ثغرات</p>
+        </div>
+        
+        <div class="discord-info">
+            <h2>انضم إلينا الآن</h2>
+            <a href="https://discord.gg/j7e" class="discord-link">discord.gg/j7e</a>
+            <p class="footer">GG : Ja7eem OP</p>
+        </div>
     </div>
+    
     <audio autoplay loop>
         <source src="aa.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-     <div class="text">اما توردها مواريد الابطال ولا استرح وخل المراجل لاهلها</div>
-   <div class="text">حياك دسكوردنا + سيرفركم كله ثغرات</div>
-    </div>
-    <div class="text">GG : Ja7eem OP : discord.gg/j7e</div>
 
     <script>
-         fetch('https://ipinfo.io/json')
-        .then(response => response.json())
-        .then(data => {
-            delete data.readme;
-            const infoDiv = document.getElementById('ip-info');
-            infoDiv.textContent = JSON.stringify(data, null, 2);
-        });
+        // إنشاء جسيمات متحركة في الخلفية
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // وضع عشوائي للجسيمات
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const size = Math.random() * 3 + 1;
+                const duration = Math.random() * 10 + 5;
+                const delay = Math.random() * 5;
+                
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${-posY}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // بدء إنشاء الجسيمات عند تحميل الصفحة
+        window.addEventListener('load', createParticles);
+        
+        // تأثير الكتابة للنصوص
+        function typeWriterEffect() {
+            const textLines = document.querySelectorAll('.text-line');
+            
+            textLines.forEach((line, index) => {
+                const text = line.textContent;
+                line.textContent = '';
+                
+                setTimeout(() => {
+                    let i = 0;
+                    const typeInterval = setInterval(() => {
+                        if (i < text.length) {
+                            line.textContent += text.charAt(i);
+                            i++;
+                        } else {
+                            clearInterval(typeInterval);
+                        }
+                    }, 50);
+                }, 1000 * index);
+            });
+        }
+        
+        // بدء تأثير الكتابة
+        typeWriterEffect();
     </script>
 </body>
 </html>
